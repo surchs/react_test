@@ -127,7 +127,7 @@ jobs:
         run: nyc report --reporter=lcov --temp-dir final_coverage --report-dir ./coverage
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage/lcov.info
